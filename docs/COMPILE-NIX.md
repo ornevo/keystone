@@ -62,14 +62,14 @@ For Windows, see [COMPILE-WINDOWS.md](COMPILE-WINDOWS.md)
    pass a semicolon-separated list of targets to LLVM_TARGETS_TO_BUILD,
    like follows if we only want AArch64 & X86.
 
-        $ cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DLLVM_TARGETS_TO_BUILD="AArch64, X86" -G "Unix Makefiles" ..
+        $ cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DLLVM_TARGETS_TO_BUILD="AArch64;X86" -G "Unix Makefiles" ..
         $ make -j8
 
    To customize your build by specifying PREFIX or other installation directories,
    pass one of the variables at https://cmake.org/cmake/help/v3.0/module/GNUInstallDirs.html
    to cmake. For example:
 
-        $ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DLLVM_TARGETS_TO_BUILD="AArch64, X86" -G "Unix Makefiles" ..
+        $ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DLLVM_TARGETS_TO_BUILD="AArch64;X86" -G "Unix Makefiles" ..
         $ make -j8
 
 
